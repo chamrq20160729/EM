@@ -1,0 +1,308 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Microsoft YaHei",STHeiti,'宋体',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+.clearfix::after {
+    clear: both;
+    content: "20";
+    visibility: hidden;
+    height: 0;
+    display: block;
+}
+html,body,#fullpage,.section{
+	height: 100%;
+}
+*html .clearfix{
+	height:1%
+	}
+*+html .clearfix{
+	min-height:1%;
+	}
+.header a,.melodyList a{
+	display: block;
+}
+.section1_Top h1,.section2_Top h1,.melodyList a,.tabList ul li,.tabCon a,.tabCon span,.section3_left,.section3_right img{
+	float: left;
+}
+.tabCon a,.section1_Top a{
+	position: relative;
+}
+#fp-nav span, .fp-slidesNav span,.foggy,.musicianName,.section1_Top a span{
+	position: absolute;
+}
+.tabCon a,.musicianName,.section3_right img{
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+.foggy,.musicianName{
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.section1_Top a,.melodyList a:hover img{
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+body { 
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select:none;
+	background: #000;
+	overflow: hidden;
+	font-size: 14px;
+	cursor: default;
+	}
+.header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: 50px;
+	padding:5px 0;
+	background:rgb(200,200,200);
+	z-index: 100;
+}
+.header a{
+	width:100px;
+	height: 50px;
+	margin-left: 10%;
+}
+#fullpage{ 
+	width: 100%; 
+	/*min-width: 1004px;
+	_width: expression(document.body.clientWidth < 1005? "1004px": "auto" ); */
+	min-height: 600px; 
+	_height: expression(document.body.clientHeight < 601? "600px": "auto" ); 
+	}
+.section{ 
+	width: 80%; 
+	margin:0 auto;
+	padding: 100px 0 50px;
+	overflow: hidden; 
+	}
+.section1_Top,.sectionTop h1{
+	height: 55px;
+}
+/*第1页*/
+#section1 h1{
+	width:50%;
+}
+#section1 h1 img{
+	width:100%;
+	max-width: 630px;
+}
+.melodyList{
+	margin:30px auto 0;
+}
+.melodyList_row{
+	text-align: center;
+}
+.melodyList a{
+	width:23%;
+	margin:1%;
+}
+.melodyList a img{
+	width:100%;
+}
+.melodyList a:hover img{
+	transform:rotateY(360deg);
+	-webkit-transform:rotateY(360deg);
+	-o-transform:rotateY(360deg);
+	-ms-transform:rotateY(360deg);
+	-moz-transform:rotateY(360deg);
+}
+.section1_Top a{
+	float: right;
+	width:150px;
+	height: 30px;
+	margin-top:12px;
+	background: url(../imgs/moreMelodyBtnGreen.png);
+}
+.section1_Top a:hover{
+	background: url(../imgs/moreMelodyBtnRed.png);
+}
+/*第2页*/
+.section2_Top,.section2_Top h1{
+	height: 130px;
+}
+.section2_Top h1{
+	width:30%;
+	max-width: 380px;
+}
+.section2_Top h1 img{
+	width:100%;
+}
+.DMitro{
+	float: right;
+}
+.DMitro p{
+	line-height: 30px;
+	text-align: right;
+	color: white;
+}
+.tabList,.tabList ul{
+	height: 30px;
+}
+.tabList ul li{
+	line-height: 30px;
+	padding: 0 30px;	
+	background:#f6ab00;
+	text-align:center;
+	color: #fff;
+}
+.tabList .cur{
+	background: #58b530;
+}
+.tabCon{
+	padding: 50px 10px;
+	background: #fff;
+	cursor: pointer;
+}
+.pre,.next{
+	width:5%;
+	height: 170px;
+	line-height: 170px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f6ab00;
+}
+.tabCon a{
+	width:16%;
+	margin:0 1%;
+}
+.tabCon a:nth-child(2n-1){
+	margin-top:30px;
+}
+.tabCon a img{
+	float:left;
+	width:100%;
+}
+.foggy{
+	background:black;
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+.musicianName{
+	display: none;
+    line-height: 180px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#F6AB00;
+}
+.tabCon a:hover{
+    transform:translate(0,-20px);
+    -webkit-transform:translate(0,-20px);
+    -moz-transform:tranlate(0,-20px);
+}
+.tabCon a:hover .foggy {
+	filter:alpha(opacity=40);
+	opacity:0.4;
+}
+.tabCon a:hover .musicianName{
+	display: block;
+}
+/*第三页*/
+#section3{
+	padding-top: 150px;
+	overflow: visible;
+}
+.section3_left{
+	width:50%;
+}
+.section3_left img{
+	width:100%;
+	max-width: 530px;
+	margin-bottom: 20px;
+}
+.section3_left p{
+	line-height: 30px;
+	font-size: 110%;
+	color: white;
+}
+.section3_left a{
+	display: block;
+	width:100px;
+	height: 30px;
+	line-height: 30px;
+	margin-top:30px;
+	background: #58B530;
+	text-align: center;
+	color: #fff;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.section3_left a::after{
+	content: "";
+    position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background: #E42313;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transtion: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    border-radius:0;
+}
+.section3_left a:hover:after{
+	-webkit-transform: scaleX(1);
+  	transform: scaleX(1);
+}
+.section3_right{
+	float: right;
+	width:30%;
+	margin-top:20px;
+}
+.section3_right img{
+	width:50%;
+}
+.section3_right .entertainment:hover{
+	transform:translate(-20px,-20px);
+    -webkit-transform:translate(-20px,-20px);
+    -moz-transform:tranlate(-20px,-20px);
+}
+.section3_right .restaurant:hover{
+	transform:translate(20px,-20px);
+    -webkit-transform:translate(20px,-20px);
+    -moz-transform:tranlate(20px,-20px);
+}
+.section3_right .hall:hover{
+	transform:translate(-20px,20px);
+    -webkit-transform:translate(-20px,20px);
+    -moz-transform:tranlate(-20px,20px);
+}
+.section3_right .hotel:hover{
+	transform:translate(20px,20px);
+    -webkit-transform:translate(20px,20px);
+    -moz-transform:tranlate(20px,20px);
+}
+#fp-nav li .active span, .fp-slidesNav .active span {
+    background: #FFF;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#fp-nav span, .fp-slidesNav span {
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    border-radius: 50%;
+    z-index: 1;
+}
